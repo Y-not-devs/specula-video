@@ -8,28 +8,57 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+        }
+        .specula-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+        }
+        .specula-button {
+            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            transition: all 0.3s ease;
+        }
+        .specula-button:hover {
+            background: linear-gradient(135deg, #059669 0%, #0891b2 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+        .specula-text-primary {
+            color: #ffffff;
+        }
+        .specula-text-secondary {
+            color: #94a3b8;
+        }
+        .specula-back-button {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            backdrop-filter: blur(10px);
+        }
+        .specula-back-button:hover {
+            background-color: #334155;
+            border-color: #06b6d4;
         }
     </style>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
+<body class="min-h-screen flex items-center justify-center p-4">
     <button class="absolute top-4 left-4 sm:top-6 sm:left-6 
-               bg-gray-700 hover:bg-gray-600 text-white 
+               specula-back-button text-white 
                p-3 rounded-full shadow-lg 
                flex items-center space-x-2 
-               transition-colors duration-200">
+               transition-all duration-300">
         <a href="https://y-not-devs.github.io/specula-landing/" class="flex items-center space-x-2">
             <span class="material-icons">arrow_back</span>
             <span class="hidden sm:inline-block font-semibold">Go Back</span>
         </a>
     </button>
 
-    <main class="w-full max-w-6xl bg-gray-800 rounded-2xl shadow-2xl p-6 sm:p-8 space-y-6 flex flex-col items-center">
+    <main class="w-full max-w-6xl specula-card rounded-2xl shadow-2xl p-6 sm:p-8 space-y-6 flex flex-col items-center">
         <div class="text-center">
-            <h1 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            <h1 class="text-3xl sm:text-4xl font-bold specula-text-primary tracking-tight">
                 Specula Presentation
             </h1>
-            <p class="mt-2 text-xs sm:text-lg text-gray-400 italic max-w-2xl mx-auto">
+            <p class="mt-2 text-xs sm:text-lg specula-text-secondary italic max-w-2xl mx-auto">
                 Sometimes a video may take a while to load. Try to use Ctrl + Shift + R to force reload the page if it doesn't load after a few seconds.
             </p>
         </div>
@@ -38,7 +67,7 @@
             <div id="player"></div>
             <div id="end-panel" class="hidden absolute inset-0 bg-black/75 backdrop-blur-sm flex-col items-center justify-center space-y-4 p-4">
                 <h3 class="text-2xl font-bold text-white text-center">Video Finished! Now let's see the demonstration of our project</h3>
-                <a href="https://y-not-devs.github.io/specula/" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 px-6 rounded-lg shadow-md flex items-center space-x-2 transition-transform duration-200 hover:scale-105">
+                <a href="https://y-not-devs.github.io/specula/" class="specula-button text-white font-semibold py-3 px-6 rounded-lg shadow-md flex items-center space-x-2 transition-transform duration-200 hover:scale-105">
                     <span class="material-icons">arrow_forward</span>
                     <span>Go to Next Page</span>
                 </a>
